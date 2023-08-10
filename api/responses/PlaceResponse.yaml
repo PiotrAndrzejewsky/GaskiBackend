@@ -1,0 +1,4 @@
+description: contains a place
+content:
+    application/json:
+        $ref: "../schemas/entities/Place.yaml"

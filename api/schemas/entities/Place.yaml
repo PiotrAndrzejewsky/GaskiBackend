@@ -1,0 +1,24 @@
+properties:
+    id:
+        type: number
+
+    userId:
+        type: number
+
+    description:
+        type: string
+
+    maximumNumberOfPeopleAllowed:
+        type: number
+        min: 1
+
+    basePricePerNight:
+        type: number
+
+    pricePerPerson:
+        type: number
+
+    isPlaceReservable:
+        type: boolean
+        default: true
+

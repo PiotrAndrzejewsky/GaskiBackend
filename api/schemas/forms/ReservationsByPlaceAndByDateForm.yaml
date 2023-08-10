@@ -1,0 +1,16 @@
+properties:
+    placeId:
+        type: number
+
+    startDate:
+        type: string
+        format: date
+
+    endDate:
+        type: string
+        format: date
+
+required:
+    - placeId
+    - startDate
+    - endDate

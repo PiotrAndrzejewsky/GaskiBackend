@@ -1,0 +1,20 @@
+post:
+    summary: create new place
+
+    tags:
+        - Place
+
+    description: This endpoint is for creating new place
+
+    security:
+        - Authorization: []
+
+    requestBody:
+        $ref: "../../requestBodies/PlaceRequestBody.yaml"
+
+    responses:
+        '201':
+            description: Place was created successfully
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"

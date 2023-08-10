@@ -1,0 +1,22 @@
+properties:
+    description:
+        type: string
+
+    maximumNumberOfPeopleAllowed:
+        type: number
+        min: 1
+
+    basePricePerNight:
+        type: number
+
+    pricePerPerson:
+        type: number
+
+    isPlaceReservable:
+        type: boolean
+
+required:
+    - maximumNumberOfPeopleAllowed
+    - basePricePerNight
+    - pricePerPerson
+

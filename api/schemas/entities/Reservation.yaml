@@ -1,0 +1,31 @@
+properties:
+    id:
+        type: number
+
+    placeId:
+        type: number
+
+    isActive:
+        type: boolean
+        default: false
+
+    clientEmail:
+        type: string
+
+    startDate:
+        type: string
+        format: date
+
+    endDate:
+        type: string
+        format: date
+
+    numberOfPeople:
+        type: number
+        min: 1
+
+    totalPrice:
+        type: number
+
+    additionalInformation:
+        type: string

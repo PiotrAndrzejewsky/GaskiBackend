@@ -1,0 +1,17 @@
+post:
+    summary: Create reservation
+
+    tags:
+        - Reservation
+
+    description: This endpoint is for creating reservation
+
+    requestBody:
+        $ref: "../../requestBodies/ReservationRequestBody.yaml"
+
+    responses:
+        '200':
+            description: The reservation was confirmed
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"

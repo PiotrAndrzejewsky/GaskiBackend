@@ -1,0 +1,53 @@
+openapi: "3.0.2"
+info:
+    title: Gąski reservations
+    version: "1.0"
+servers:
+    -   url: http://localhost:8080
+tags:
+    - name: Login
+
+components:
+    securitySchemes:
+        Authorization:
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
+        RefreshToken:
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
+
+    schemas:
+        $ref: "./schemas/index.yaml"
+
+paths:
+    /user/login:
+       $ref: "./paths/login/Login.yaml"
+
+    /user/create:
+        $ref: "./paths/login/SignUp.yaml"
+
+    /refresh:
+        $ref: "./paths/login/RefreshToken.yaml"
+
+    /user/activate:
+        $ref: "./paths/login/ActivateUser.yaml"
+
+    /place/{placeId}:
+        $ref: "./paths/place/Place.yaml"
+
+    /place/create:
+        $ref: "./paths/place/CreateNewPlace.yaml"
+
+    /place/user/{userId}:
+        $ref: "./paths/place/GetPlacesByUserId.yaml"
+
+    /reservation/{reservationId}:
+        $ref: "./paths/reservation/Reservation.yaml"
+
+    /reservation/create:
+        $ref: "./paths/reservation/CreateReservation.yaml"
+
+    /reservation/date:
+        $ref: "./paths/reservation/GetReservationsByPlaceAndByDate.yaml"

@@ -1,0 +1,71 @@
+delete:
+    summary: Delete place
+
+    tags:
+        - Place
+
+    description: This endpoint is for deleting a place
+
+    security:
+        - Authorization: []
+
+    parameters:
+        - in: path
+          name: placeId
+          schema:
+              type: number
+
+    responses:
+        '200':
+            description: The place and it's reservations was deleted successfully
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
+
+put:
+    summary: Update place
+
+    tags:
+        - Place
+
+    description: This endpoint is for updating a place
+
+    security:
+        - Authorization: []
+
+    parameters:
+        -   in: path
+            name: placeId
+            schema:
+                type: number
+
+    requestBody:
+        $ref: "../../requestBodies/PlaceRequestBody.yaml"
+
+    responses:
+        '200':
+            description: The place and it's reservations was deleted successfully
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
+
+get:
+    summary: get place by placeId
+
+    tags:
+        - Place
+
+    description: This endpoint is for getting place info by place id
+
+    parameters:
+        -   in: path
+            name: placeId
+            schema:
+                type: number
+
+    responses:
+        '200':
+            $ref: "../../responses/PlaceResponse.yaml"
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"

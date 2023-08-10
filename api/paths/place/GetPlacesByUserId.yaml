@@ -1,0 +1,20 @@
+get:
+    summary: get list of places by userId
+
+    tags:
+        - Place
+
+    description: This endpoint is for getting list of places by userId
+
+    parameters:
+        -   in: path
+            name: userId
+            schema:
+                type: number
+
+    responses:
+        '200':
+            $ref: "../../responses/ListOfPlacesResponse.yaml"
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
