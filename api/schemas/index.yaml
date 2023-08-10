@@ -1,0 +1,11 @@
+ApiError:
+    $ref: "./entities/ApiError.yaml"
+
+Place:
+    $ref: "./entities/Place.yaml"
+
+Reservation:
+    $ref: "./entities/Reservation.yaml"
+
+User:
+    $ref: "./entities/User.yaml"
