@@ -1,0 +1,4 @@
+description: contains a reservation
+content:
+    application/json:
+        $ref: "../schemas/entities/Reservation.yaml"

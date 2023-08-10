@@ -1,0 +1,68 @@
+post:
+    summary: Confirm reservation
+
+    tags:
+        - Reservation
+
+    description: This endpoint is for confirming reservation, this can only be done by owner of the place
+
+    security:
+        - Authorization: []
+
+    parameters:
+        - in: path
+          name: reservationId
+          schema:
+              type: number
+
+    responses:
+        '200':
+            description: The reservation was confirmed
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
+
+get:
+    summary: Gets reservation by reservationId
+
+    tags:
+        - Reservation
+
+    description: This endpoint is for getting a reservation by its id
+
+    parameters:
+        - in: path
+          name: reservationId
+          schema:
+              type: number
+
+    responses:
+        '200':
+            $ref: "../../responses/ReservationResponse.yaml"
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
+
+delete:
+    summary: Deletes reservation
+
+    tags:
+        - Reservation
+
+    description: This endpoint is for deleting reservation
+
+    security:
+        -   Authorization: []
+
+    parameters:
+        - in: path
+          name: reservationId
+          schema:
+              type: number
+
+    responses:
+        '200':
+            description: The reservation was deleted
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"

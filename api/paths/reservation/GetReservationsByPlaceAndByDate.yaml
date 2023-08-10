@@ -1,0 +1,17 @@
+get:
+    summary: Gets list of reservations by date and by placeId
+
+    tags:
+        - Reservation
+
+    description: This endpoint is for getting a list of reservations by date and by placeId
+
+    requestBody:
+        $ref: "../../requestBodies/ReservationsByPlaceAndByDateRequestBody.yaml"
+
+    responses:
+        '200':
+            $ref: "../../responses/ListOfReservationsResponse.yaml"
+
+        default:
+            $ref: "../../responses/ApiErrorResponse.yaml"
